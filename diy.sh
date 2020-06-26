@@ -15,7 +15,7 @@ sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/theme
 
 echo '删除旧版argon,链接新版'
 rm -rf ./package/lean/luci-theme-argon
-ln -s ../../../luci-theme-argon ./package/lean/
+git clone https://github.com/jerrykuku/luci-theme-argon ./package/lean/luci-theme-argon
 
 echo '修改wifi名称'
 sed -i 's/OpenWrt/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
